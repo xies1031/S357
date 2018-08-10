@@ -10,10 +10,6 @@ wget https://raw.githubusercontent.com/asinen/S357/master/33.conf
 mv 33.conf /www/chain33/chain33.conf
 cp chain33.conf /etc/supervisor/conf.d/chain33.conf
 supervisorctl reload
-echo "1"
 supervisorctl start chain33
-echo "2"
 sleep 15
-echo "3"
 ./chain33-cli net info
-echo "4"
