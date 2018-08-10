@@ -1,3 +1,4 @@
+cd /
 cd /www/chain33
 ./chain33-cli seed generate -l 0 | grep seed | cut -d '"' -f 4 > ~/mySeed.txt
 cat ~/mySeed.txt | xargs -I{} ./chain33-cli seed save -p 123456 -s "{}"
