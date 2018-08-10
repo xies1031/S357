@@ -8,6 +8,10 @@ tar zxf bityuan_ubuntu.tgz
 cd chain33
 cp chain33.conf /etc/supervisor/conf.d/chain33.conf
 supervisorctl reload
+echo "1"
 supervisorctl start chain33
+echo "2"
 sleep 15
+echo "3"
 ./chain33-cli net info
+echo "4"

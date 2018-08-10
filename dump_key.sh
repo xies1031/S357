@@ -1,6 +1,9 @@
 cd /
+echo "5"
 cd /www/chain33
+echo "6"
 ./chain33-cli seed generate -l 0 | grep seed | cut -d '"' -f 4 > ~/mySeed.txt
+echo "7"
 cat ~/mySeed.txt | xargs -I{} ./chain33-cli seed save -p 123456 -s "{}"
 ./chain33-cli  wallet unlock  -p 123456 -s wallet -t 0
 sleep 3
