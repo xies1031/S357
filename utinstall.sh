@@ -1,3 +1,4 @@
+apt-get update
 sudo apt install git build-essential gcc g++ cmake libuv1-dev libmicrohttpd-dev openssl -y
 sudo apt-get install libssl-dev -y
 git clone https://github.com/UlordChain/ulordrig.git
