@@ -6,31 +6,37 @@
 #curl -fsSL https://raw.githubusercontent.com/asinen/S357/master/utinstall.sh | sh
 #logout
 #sleep 1
-doctl compute ssh root@2
+#doctl compute ssh root@2
+#curl -fsSL https://raw.githubusercontent.com/asinen/S357/master/utinstall.sh | sh
+#logout
+#sleep 1
+doctl compute ssh root@3 -o stricthostkeychecking=no
+expect "password:"
+send "jayjay\r"
+curl -fsSL https://raw.githubusercontent.com/asinen/S357/master/utinstall.sh | sh
+send "exit"
+expect eof
+doctl compute ssh root@4 -o stricthostkeychecking=no
+expect "password:"
+send "jayjay\r"
+curl -fsSL https://raw.githubusercontent.com/asinen/S357/master/utinstall.sh | sh
+send "exit"
+expect eof
+doctl compute ssh root@5 -o stricthostkeychecking=no
+expect "password:"
+send "jayjay\r"
 curl -fsSL https://raw.githubusercontent.com/asinen/S357/master/utinstall.sh | sh
 logout
 sleep 1
-doctl compute ssh root@3
+doctl compute ssh root@6 -o stricthostkeychecking=no
 curl -fsSL https://raw.githubusercontent.com/asinen/S357/master/utinstall.sh | sh
 logout
 sleep 1
-doctl compute ssh root@4
+doctl compute ssh root@7 -o stricthostkeychecking=no
 curl -fsSL https://raw.githubusercontent.com/asinen/S357/master/utinstall.sh | sh
 logout
 sleep 1
-doctl compute ssh root@5
-curl -fsSL https://raw.githubusercontent.com/asinen/S357/master/utinstall.sh | sh
-logout
-sleep 1
-doctl compute ssh root@6
-curl -fsSL https://raw.githubusercontent.com/asinen/S357/master/utinstall.sh | sh
-logout
-sleep 1
-doctl compute ssh root@7
-curl -fsSL https://raw.githubusercontent.com/asinen/S357/master/utinstall.sh | sh
-logout
-sleep 1
-doctl compute ssh root@8
+doctl compute ssh root@8 -o stricthostkeychecking=no
 curl -fsSL https://raw.githubusercontent.com/asinen/S357/master/utinstall.sh | sh
 logout
 sleep 1
