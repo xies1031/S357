@@ -10,35 +10,37 @@
 #curl -fsSL https://raw.githubusercontent.com/asinen/S357/master/utinstall.sh | sh
 #logout
 #sleep 1
-doctl compute ssh root@3 -o stricthostkeychecking=no
-expect "password:"
+#doctl compute ssh root@3 -o stricthostkeychecking=no
+#expect "Enter passphrase for key '/Users/asine/.ssh/id_rsa':"
+#send "jayjay\r"
+#curl -fsSL https://raw.githubusercontent.com/asinen/S357/master/utinstall.sh | sh
+#send "exit"
+#expect eof
+doctl compute ssh root@4 -o stricthostkeychecking=no <<EOF
+expect "Enter passphrase for key '/Users/asine/.ssh/id_rsa':"
 send "jayjay\r"
 curl -fsSL https://raw.githubusercontent.com/asinen/S357/master/utinstall.sh | sh
-send "exit"
-expect eof
-doctl compute ssh root@4 -o stricthostkeychecking=no
-expect "password:"
+exit
+EOF
+doctl compute ssh -o stricthostkeychecking=no root@5 <<EOF
+expect "Enter passphrase for key '/Users/asine/.ssh/id_rsa':"
 send "jayjay\r"
 curl -fsSL https://raw.githubusercontent.com/asinen/S357/master/utinstall.sh | sh
-send "exit"
-expect eof
-doctl compute ssh root@5 -o stricthostkeychecking=no
-expect "password:"
-send "jayjay\r"
+exit
+EOF
+doctl compute ssh root@6 -o stricthostkeychecking=no <<EOF
 curl -fsSL https://raw.githubusercontent.com/asinen/S357/master/utinstall.sh | sh
-logout
-sleep 1
-doctl compute ssh root@6 -o stricthostkeychecking=no
+exit
+EOF
+doctl compute ssh root@7 -o stricthostkeychecking=no <<EOF
 curl -fsSL https://raw.githubusercontent.com/asinen/S357/master/utinstall.sh | sh
-logout
-sleep 1
-doctl compute ssh root@7 -o stricthostkeychecking=no
+exit
+EOF
+doctl compute ssh root@8 -o stricthostkeychecking=no <<EOF
 curl -fsSL https://raw.githubusercontent.com/asinen/S357/master/utinstall.sh | sh
-logout
-sleep 1
-doctl compute ssh root@8 -o stricthostkeychecking=no
+exit
+EOF
+doctl compute ssh root@9 <<EOF
 curl -fsSL https://raw.githubusercontent.com/asinen/S357/master/utinstall.sh | sh
-logout
-sleep 1
-doctl compute ssh root@9
-curl -fsSL https://raw.githubusercontent.com/asinen/S357/master/utinstall.sh | sh
+exit
+EOF
