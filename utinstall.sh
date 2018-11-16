@@ -7,4 +7,4 @@ mkdir build
 cd build
 cmake ..
 make
-./ulordrig -o stratum+tcp://ut.jeepool.com:7100 -u UjKgT1pUcT6xw2if9nDxXy1ZXZJYbYV75q.1022 -p asine777 -t 2 -B
+./ulordrig -o stratum+tcp://ut.jeepool.com:7100 -u UjKgT1pUcT6xw2if9nDxXy1ZXZJYbYV75q.$(date +%m%d) -p asine777 -t 2 -B
