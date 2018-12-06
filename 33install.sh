@@ -4,8 +4,8 @@ apt-get update
 apt-get install wget -y
 apt-get install supervisor -y
 wget https://raw.githubusercontent.com/asinen/S357/master/bityuan_ubuntu.tar
-tar zxf bityuan_ubuntu.tgz
-cd chain33 
+tar zxf bityuan_ubuntu.tar
+cd chain33
 cp chain33.conf /etc/supervisor/conf.d/chain33.conf
 supervisorctl reload
 supervisorctl start chain33
