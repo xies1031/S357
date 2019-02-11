@@ -19,4 +19,4 @@ cat ~/mySeed.txt | xargs -I{} ./chain33-cli seed save -p 123456 -s "{}"
 sleep 3
 ./chain33-cli account  list  | grep "node award" -B 2 | grep addr   | cut -d '"' -f 4 > ~/myNodeAddr
 cat ~/myNodeAddr | xargs -I{} ./chain33-cli  account dump_key -a {} > ~/myNodePriv
-cat ~/myNodePriv   | grep replystr | cut -d '"' -f 4 | xargs  -I{} echo "account import_key -l $(date +%m%d/%H%M)____ -k {} "
+cat ~/myNodePriv   | grep data | cut -d '"' -f 4 | xargs  -I{} echo "account import_key -l $(date +%m%d/%H%M)____ -k {} "
