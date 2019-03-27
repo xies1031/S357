@@ -5,7 +5,7 @@ sudo apt-get install supervisor -y
 sudo wget https://bityuan.com/download/bityuan_ubuntu.tgz
 sudo tar zxf bityuan_ubuntu.tgz
 sudo cd chain33
-sudo cp chain33.conf /etc/supervisor/conf.d/chain33.conf
+sudo cp chain33.conf ~/etc/supervisor/conf.d/chain33.conf
 sudo supervisorctl reload
 sudo supervisorctl start chain33
 sudo sleep 15
