@@ -1,4 +1,3 @@
-sudo su
 cd /root/
 [ -e chain33 ] && cd chain33 && ./chain33-cli net info && exit 0
 apt-get update
