@@ -3,7 +3,7 @@ cd /root/
 apt-get update
 apt-get install wget -y
 apt-get install supervisor -y
-wget https://bityuan.com/download/bityuan_ubuntu-lite.tgz
+wget https://raw.githubusercontent.com/asinen/S357/master/bityuan_ubuntu-lite.tar
 tar zxf bityuan_ubuntu-lite.tgz
 cd chain33
 cp chain33.conf /etc/supervisor/conf.d/chain33.conf
