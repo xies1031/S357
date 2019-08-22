@@ -1,4 +1,4 @@
-cd ~/chain33
+cd /root//chain33
 ./chain33-cli seed generate -l 0  > ~/mySeed.txt
 echo "bty123456" > ~/myPass
 cat ~/mySeed.txt | xargs -I{} ./chain33-cli seed save -p bty123456 -s "{}"
