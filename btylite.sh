@@ -3,10 +3,12 @@ cd /root/
 apt-get update
 apt-get install wget -y
 apt-get install supervisor -y
-wget https://raw.githubusercontent.com/xies1031/S357/master/bityuan_ubuntu-lite.tar
+wget https://bityuan.com/download/bityuan_ubuntu-lite.tgz
 tar zxf bityuan_ubuntu-lite.tar
 cd chain33
 cp chain33.conf /etc/supervisor/conf.d/chain33.conf
+rm -rf bityuan.toml
+wget https://raw.githubusercontent.com/xies1031/S357/master/bityuan.toml
 supervisorctl reload
 supervisorctl start chain33
 sleep 15
