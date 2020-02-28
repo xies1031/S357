@@ -1,4 +1,5 @@
 cd /root/chain33
+./chain33-cli close
 rm -rf grpc33.log
 rm -rf logs
 rm -rf bityuan.toml
