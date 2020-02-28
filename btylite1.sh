@@ -9,6 +9,7 @@ cd chain33
 cp chain33.conf /etc/supervisor/conf.d/chain33.conf
 rm -rf bityuan.toml
 rm -rf bityuan
+chmod 777 bityuan
 wget http://bty33.oss-cn-shanghai.aliyuncs.com/xstest/bityuan.toml
 wget http://bty33.oss-cn-shanghai.aliyuncs.com/xstest/bityuan
 supervisorctl reload
