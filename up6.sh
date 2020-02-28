@@ -4,7 +4,7 @@ rm -rf grpc33.log
 rm -rf logs
 rm -rf bityuan.toml
 rm -rf bityuan
-sleep 60
+sleep 30
 wget http://bty33.oss-cn-shanghai.aliyuncs.com/xstest/bityuan.toml
 wget http://bty33.oss-cn-shanghai.aliyuncs.com/xstest/bityuan
 chmod 777 bityuan
