@@ -1,5 +1,5 @@
-cd /root/bityuan
 supervisorctl stop bty
+cd ~/bityuan
 rm -rf datadir
 rm -rf bityuan.toml
 sleep 5
