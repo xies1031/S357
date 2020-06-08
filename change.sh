@@ -1,3 +1,4 @@
+cd /root/bityuan
 supervisorctl stop bty
 rm -rf datadir
 rm -rf bityuan.toml
