@@ -34,17 +34,30 @@ enableReExecLocal=false
 enableReduceLocaldb=true
 
 [p2p]
+types=["gossip", "dht"]
+dbPath="datadir/addrbook"
+dbCache=4
+grpcLogFile="grpc33.log"
+#waitPid 等待seed导入
+waitPid=false
+
+[p2p.sub.gossip]
 port=13802
 seeds=[]
 isSeed=false
 innerSeedEnable=true
 useGithub=true
 innerBounds=300
-dbPath="datadir/addrbook"
-dbCache=4
-grpcLogFile="grpc33.log"
-#waitPid 等待seed导入
-waitPid=false
+
+[p2p.sub.dht]
+#可以自定义设置连接节点
+seeds=[]
+port=13803
+#dht 版本还不稳定，暂时限定较小的连接数
+maxConnectNum=50
+#区块轻广播最低区块大小，1k
+minLtBlockSize=1
+
 
 [rpc]
 jrpcBindAddr="localhost:8801"
@@ -64,9 +77,9 @@ dbPath="datadir/mavltree"
 dbCache=128
 
 [store.sub.mavl]
-enableMavlPrefix=false
+enableMavlPrefix=true
 enableMVCC=false
-enableMavlPrune=false
+enableMavlPrune=true
 pruneHeight=10000
 enableMemTree=true
 enableMemVal=true
@@ -75,7 +88,7 @@ tkCloseCacheLen=200000
 
 [store.sub.kvmvccmavl]
 enableMVCCIter=true
-enableMavlPrefix=false
+enableMavlPrefix=true
 enableMVCC=false
 enableMavlPrune=true
 pruneMavlHeight=10000
