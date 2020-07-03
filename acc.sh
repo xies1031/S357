@@ -1,4 +1,3 @@
-sudo su
 supervisorctl stop bty
 cd /root/bityuan/datadir
 sleep 1
