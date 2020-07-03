@@ -1,4 +1,9 @@
-cd chain33 
-./bityuan-cli wallet unlock -p bty123456 
-sleep 5
-./bityuan-cli wallet merge -t 19SNThK12t7TJBWetY7RCv1gb2S6yvRw7k
+sudo su
+supervisorctl stop bty
+cd /root/bityuan/datadir
+sleep 1
+rm -rf addrbook
+sleep 1
+supervisorctl start bty
+cd /root/bityuan
+./bityuan-cli net peer
