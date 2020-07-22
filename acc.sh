@@ -1,4 +1,5 @@
-supervisorctl stop bty
+cd
+rm -rf bityuan_ubuntu.tgz
 sleep 1
-supervisorctl start bty
-
+cd bityuan
+rm -rf grpc33.log
