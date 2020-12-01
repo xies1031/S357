@@ -11,5 +11,6 @@ sleep 1
 wget http://bty33.oss-cn-shanghai.aliyuncs.com/xstest/bityuan
 sleep 1
 chmod 777 bityuan
+supervisorctl start bty
 
 
